@@ -13,6 +13,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+    max-width:100%;
 }
 
 html, body {
@@ -53,7 +54,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    max-width: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -98,19 +100,16 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 .container {
 	border:3px solid gray;
-	height:100%;
-	width:100%;
-
-
-
 
 }
+
 nav{
 	text-align: center;
 	height:10px;
     margin-left:5%;
     display:flex;
-	flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width:90%;
 }
 nav a{
 margin-top: 2%;
@@ -128,19 +127,16 @@ margin-right:4%;
 }
 #top {
 
-    height:60%;
+    
 	width:90%;
 	display:flex;
-	margin-left:10px;
+	margin-left:5%;
 	justify-content:center;
-	margin-bottom:10%;
+	margin-bottom:5%;
 	
 }
 
-.header{
-width:40%;;
-height:100%;
-}
+    
 
 h1{
 
@@ -171,10 +167,9 @@ button{
 	display:flex;
 	height:50%;
 	width:90%;
-	margin-left:5%;
-	margin-right:5%;
 	justify-content:space-between;
-	margin-bottom:5%;
+    margin-bottom:5%;
+    margin-left:3%;
 	
 }
 
@@ -199,8 +194,8 @@ button{
 	display:flex;
 	justify-content: center;
 	width:90%;
-	margin-left:5%;
-	margin-right:5%;
+    margin-left:4%;
+	margin-right:2%;
 	
 }
 #bottom{
@@ -218,7 +213,7 @@ button{
 .services{
 	
 	text-align:left;
-	width:33%;
+	width:32%;
 	height:100%;
 	margin-top:5%;
 }
@@ -226,7 +221,7 @@ button{
 .product{
 	
    text-align:left;
-	width:33%;
+	width:32%;
 	height:100%;
 	margin-top:5%;
 
@@ -235,7 +230,7 @@ button{
 
 .vision{
 	text-align:left;
-   width:33%;
+   width:32%;
 	height:100%;
 	margin-top:5%;
 
@@ -261,14 +256,15 @@ button{
 
 @media(max-width: 800px){
    #head{
-
+      width:90%;
        display:flex;
        flex-direction: column-reverse;
        align-items:center;
+
    }
     
 .logo{
-    width:100%;
+    width:90%;
     margin-top: 10%;
     margin-bottom:7%;
 }
@@ -281,7 +277,7 @@ button{
       }
       
       .nav a{
-          width:70%;
+          width:90%;
           height:100%;
           color: grey;
           justify-content: space-around;
@@ -290,7 +286,8 @@ button{
       }
 
       #top{
-          margin: 0 auto;
+         /*  margin: 0 auto; */
+
           width:90%;
       }
 .codepic{
@@ -298,8 +295,9 @@ button{
 }
 
 h1{
-    align-content: center;
+    text-align: center;
     width:90%;
+    
     
 }
 
@@ -308,10 +306,10 @@ h1{
 button{
 background-color:white;
 	border:2px solid black;
-    width:60%;
+    width:30%;
     height:30px;
-	margin-left:15%;
-	vertical-align: center;
+    margin-left:30%;
+	align-content: center;
 }
 
 #middle{
@@ -320,55 +318,51 @@ background-color:white;
 }
 
 @media(max-width: 500px){
-    body{
-        background-color: blue;
-        width:500px;
-        
-}
-/*
-nav{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap:nowrap;
-    width:90%;
 
-}
-nav a{
-    border: 1px solid gray;
-    justify-content: space-evenly;
-    
- 
-}
-*/
-
-nav{
-    align-items:center;
-display:flex;
-flex-direction:column;
-
+#head{
     width:100%;
-    height: 60%;
-    line-height: 2;  
+    border-bottom: 1px solid gray;
+}
 
+nav{
+    border-top: 1px solid gray;
+    align-items:center;
+ display:flex;
+ flex-direction:column;
+    width:100%;
+    height: 50%;
+    line-height: 2;  
+    border:2px solid green;
 }
 
 nav a{
-width:100%;    
-border-top:1px solid gray;
 border-bottom:1px solid gray;
-margin: 0 auto;
 font-size:20px;
 justify-content: space-around;
 align-items:center;
+border:2px solid red;
 }
 
 .logo{
 flex-direction:column;
 }
 
+button{
+    background-color:white;
+        border:2px solid black;
+        width:30%;
+        height:30px;
+        margin-left:30%;
+        align-content: center;
+    }
+    
+    h1{
+        font-size: 50px;
+        width:90%;
+    }
+
 #top{
-    margin-top:55%;
+   align-content: center;
     margin-bottom:10%;
 }
 
@@ -378,17 +372,17 @@ flex-direction:column;
 }
 .features{
     margin-bottom: 10%;
-    width:100%;
+    width:90%;
 
 }
 .about{
     margin-bottom: 10%;
-    width:100%;
+    width:90%;
 }
 
 
 .picbreak{
-    width:90%;
+    width:85%;
 }
 
 
@@ -396,36 +390,24 @@ flex-direction:column;
     display:flex;
     flex-direction: column;
     flex-wrap:nowrap;
-    margin-bottom:50%;
+    margin-bottom:30%;
 }
 .services{
     margin-bottom: 10%;
-    width:100%;
+    width:90%;
 }
 
 .product{
     margin-bottom: 10%;
-    width:100%;
+    width:90%;
 }
 
 .vision{
     margin-bottom: 10%;
-    width:100%;
+    width:90%;
 }
 
-button{
-background-color:white;
-	border:2px solid black;
-    width:100%;
-    height:30px;
-	margin-left:15%;
-	vertical-align: center;
-}
 
-h1{
-    font-size: 50px;
-    width:100%;
-}
 
 
 
